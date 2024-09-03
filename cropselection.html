@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: 0;
+        }
+
+        html{
+            height: 600px;
+        }
+
+        header{
+            height:80px;
+            background: linear-gradient(to right, rgb(35, 175, 0), rgb(139, 255, 128));
+            display: flex;
+            align-items: center;
+        }
+
+        header h2{
+            color: white;
+            margin-left:20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: xx-large;
+        }
+
+        article{
+            padding: 5%;
+            height:100%;
+            background-color: rgb(239, 255, 235);
+        }
+
+        .container{
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+            padding: 5%;
+            border-radius: 8px;
+            /* box-shadow: 1px 1px 8px -4px; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            border: solid 0.1px #0000002a;
+        }
+
+        .crop-box{
+            /* background-color: grey; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            height: 100px;
+            width: 60px;
+            transition: 0.5s;
+            border-radius: 5px;
+            /* border:solid 2px #000; */
+        }
+
+        .crop-box:hover{
+            background-color: antiquewhite;
+            box-shadow: 0 0 2px -2px;
+        }
+
+        .img-box{
+            height: 60px;
+            width: 60px;
+            /* background-color: aqua; */
+            border-radius: 50%;
+            overflow: hidden;
+            border: solid 0.5px #000;
+        }
+        img{
+            height: 100%;
+            object-fit: cover;
+            
+        }
+
+        .crop-name{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h2>Select the crop</h2>
+    </header>
+    <article>
+        <div class="container">
+            <div class="crop-box" onabort="predictDisease('Crop 1')"  >
+                <div class="img-box">
+                    <img src="images/apple.png" alt="Crop 1">
+                </div>
+                <div class="crop-name">
+                    <p>Apple</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/bellpeppers.jpg" alt="Crop 1">
+                </div>
+                <div class="crop-name">
+                    <p>Bell peppers</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/cherry.png" alt="Crop 1">
+                </div>
+                <div class="crop-name">
+                    <p>cherry</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/corn.jpg" alt="Crop 1">
+                </div>
+                <div class="crop-name">
+                    <p>Corn</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/grape.png" alt="Crop 1">
+                </div>
+                <div class="crop-name">
+                    <p>Grape</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/peach.png" alt="Crop 1">
+                </div>
+                <div class="crop-name">
+                    <p>Peach</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/potato.jpg" alt="Crop 2">
+                </div>
+                <div class="crop-name">
+                    <p>Potato</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/strawberry.jpg" alt="Crop 3">
+                </div>
+                <div class="crop-name">
+                    <p>Strawberry</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/tomato.jpg" alt="Crop 4">
+                </div>
+                <div class="crop-name">
+                    <p>Tomato</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 4">
+                </div>
+                <div class="crop-name">
+                    <p>xyz</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 5">
+                </div>
+                <div class="crop-name">
+                    <p>XYZ</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 6">
+                </div>
+                <div class="crop-name">
+                    <p>XYZ</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 7">
+                </div>
+                <div class="crop-name">
+                    <p>XYZ</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 8">
+                </div>
+                <div class="crop-name">
+                    <p>XYZ</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 9">
+                </div>
+                <div class="crop-name">
+                    <p>XYZ</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 10">
+                </div>
+                <div class="crop-name">
+                    <p>XYZ</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 11">
+                </div>
+                <div class="crop-name">
+                    <p>XYZ</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 12">
+                </div>
+                <div class="crop-name">
+                    <p>XYZ</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 13">
+                </div>
+                <div class="crop-name">
+                    <p>XYZ</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 14">
+                </div>
+                <div class="crop-name">
+                    <p>XYZ</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 15">
+                </div>
+                <div class="crop-name">
+                    <p>XYZ</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 16">
+                </div>
+                <div class="crop-name">
+                    <p>XYZ</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 17">
+                </div>
+                <div class="crop-name">
+                    <p>XYZ</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 18">
+                </div>
+                <div class="crop-name">
+                    <p>XYZ</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 19">
+                </div>
+                <div class="crop-name">
+                    <p>XYZ</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 20">
+                </div>
+                <div class="crop-name">
+                    <p>XYZ</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 21">
+                </div>
+                <div class="crop-name">
+                    <p>XYZ</p>
+                </div>
+            </div>            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 22">
+                </div>
+                <div class="crop-name">
+                    <p>XYZ</p>
+                </div>
+            </div>            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 23">
+                </div>
+                <div class="crop-name">
+                    <p>XYZ</p>
+                </div>
+            </div>            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 1">
+                </div>
+                <div class="crop-name">
+                    <p>XYZ</p>
+                </div>
+            </div>            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 24">
+                </div>
+                <div class="crop-name">
+                    <p>XYZ</p>
+                </div>
+            </div>            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 25">
+                </div>
+                <div class="crop-name">
+                    <p>XYZ</p>
+                </div>
+            </div>            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 26">
+                </div>
+                <div class="crop-name">
+                    <p>XYZ</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 27">
+                </div>
+                <div class="crop-name">
+                    <p>XYZ</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 28">
+                </div>
+                <div class="crop-name">
+                    <p>XYZ</p>
+                </div>
+            </div>
+            <div class="crop-box" onabort="predictDisease('Crop 1')">
+                <div class="img-box">
+                    <img src="images/empty.png" alt="Crop 29">
+                </div>
+                <div class="crop-name">
+                    <p>XYZ</p>
+                </div>
+            </div>
+        </div>
+        <script src="javascriptfile/selectcrop.js"></script>
+    </article>
+</body>
+
+</html>

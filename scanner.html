@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+    <link rel="stylesheet" href="css file/scanner.css">
+</head>
+<body>
+    <header>
+        <h2>Insert the Data</h2>
+    </header>
+    <article>
+        <div class="container">
+            <div id="drop-area">
+                <p>Drag & Drop your image here</p>
+                <input type="file" id="fileElem" accept="image/*" onchange="handleFiles(this.files)">
+                <label class="button" for="fileElem">Select Image</label>
+            </div>
+            <div id="gallery" class="gallery"></div>
+            <button id="gen-button">GENERATE</button>
+        </div>
+       
+    </article>
+
+    <script src="javascriptfile/scanner.js"></script>
+</body>
+</html>

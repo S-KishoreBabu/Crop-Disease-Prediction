@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f9f4;
+    color: #17421e;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #104c25;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.crop-icon {
+    background-color: #c3f9cb;
+    border-radius: 80px;
+    padding:40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.crop-icon:hover {
+    transform: scale(1.05);
+}
+
+.crop-icon img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.crop-icon p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #2c6e49;
+}

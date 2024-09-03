@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+body {
+    height: max-content;
+    background-image: url("../images/banner.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 90px;
+    width: 98%;
+    padding: 0% 2% 0% 1%;
+    font-size: 18px;
+
+
+    position: fixed;
+    z-index: 999;
+    top: 0%;
+    transition: background-color 0.5s ease;
+}
+
+.topbar .logo {
+    margin-right: auto;
+}
+
+.topbar nav {
+    display: flex;
+    align-items: center;
+}
+
+.topbar nav .menu {
+    display: flex;
+    align-items: center;
+}
+
+.topbar .menu-img {
+    width: 25px;
+    margin-right: 0px;
+    cursor: pointer;
+}
+
+.topbar .logo {
+    width: 160px;
+    cursor: pointer;
+}
+
+.topbar .menu {
+    flex: 1;
+    text-align: right;
+}
+
+.topbar .menu li {
+    display: inline-block;
+    list-style: none;
+    cursor: pointer;
+    margin-left: 40px;
+    transition: color 0.4s ease;
+}
+
+.topbar nav .menu li a {
+    position: relative;
+    height: max-content;
+    width: max-content;
+    padding: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#menulink:hover {
+    background-color: rgba(238, 238, 238, 0.318);
+    height: max-content;
+    width: max-content;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.3s;
+    text-shadow: 3px 3px 0px rgb(0, 116, 14);
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+header {
+    width: 100%;
+    height: 400px;
+    background-color: #00000067;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+}
+
+#tittle {
+    /* margin-left: 45%; */
+    position: absolute;
+    /* height: 30px;
+    width: 360px; */
+    font-size: 80px;
+    background-color: #00000000;
+    /* border: solid 2px #fff; */
+    color: #fff;
+    font-family: "Oswald", sans-serif;
+    /* transition: 0.5s;
+    cursor: pointer; */
+}
+
+article {
+    height: 2000px;
+    width: 100%;
+    background-color: #eff5ff;
+    box-shadow: 0 0 10px -1px;
+}
+/* ----------------------------------------------------------------box-1---------------------------------------------------------------------- */
+
+.box-1 {
+    width: 100%;
+    background-color: #ceffc8;
+    height: 240px;
+    display: grid;
+    place-items: center;
+}
+
+.box-1 .container .tittlebox,
+.box-2 .para-container .tittlebox {
+    font-family: "Moderustic", sans-serif;
+    margin-bottom: 24px;
+}
+
+.box-1 .container .tittlebox h2 {
+    line-height: 1.3;
+    text-align: center;
+    font-weight: 300;
+}
+.box-1 .container .tittlebox .box-1-tittle2 {
+    color: #50ff5f;
+}
+
+.box-1 .container .contentbox p{
+    max-width: 680px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    color: #626262;   
+}
+
+/* ----------------------------------------------------------------------------------box-2 ------------------------------------------------------------------------------------- */
+
+.box-2 {
+    display: flex;
+    height: 380px;
+}
+
+.box-2 .para-container .tittlebox h1 {
+    line-height: 1.3;
+    text-align: center;
+    font-weight: 700;
+    color: #50ff5f;
+    text-shadow: 2px 2px #000;
+}
+
+
+
+.box-2 .para-container .contentbox p {
+    max-width: 680px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    color: #626262;
+}
+
+
+
+.box-2 .para-container .contentbox {
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.box-2 .picture-container {
+    background-color: #ffffff;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture-box {
+    height: 300px;
+    box-shadow: 8px 8px #005401;
+    border: solid 2px #005401;
+}
+
+#garden-img {
+    height: 100%;
+    width: 100%;
+}
+
+/* ----------------------------------------------------box-3 --------------------------------------------------------------------------- */
+
+
+
+.box-3 {
+    display: flex;
+    flex-wrap: wrap;
+    height: 60vh;
+    box-sizing: border-box;
+}
+
+
+.box-3 .container  {
+    flex: 1 1 50%; /* Flex-grow, flex-shrink, and flex-basis */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.box-3 .left-container {
+    background-color: #ceffc8;
+}
+
+.box-3 .right-container {
+    background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .box-3 .container  {
+        flex: 1 1 100%; 
+    }
+}
+
+.box-3 .container .innercontainer .tittlebox{
+    font-family: "Moderustic", sans-serif;
+    margin-bottom: 24px;
+    line-height: 1.3;
+    text-align: center;
+    font-weight: 300;
+}
+
+
+.box-3 .container .innercontainer .contentbox p {
+    max-width: 680px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    color: #626262;
+}
+
+button{
+    height: 30px;
+    width: 160px;
+    font-size: larger;
+    background-color: #26ff38;
+    /* border: solid 2px #fff; */
+    border: none;
+    color: #fff;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: 3px 3px #0e7700;
+}
+
+button:hover {
+    box-shadow: 0px 0px #0e7700;
+    
+}

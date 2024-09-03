@@ -1,0 +1,141 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy crops</title>
+    <link rel="stylesheet" href="css file\home.css">
+    <script src="javascriptfile\home.js"></script>
+</head>
+
+<body>
+    <div class="topbar" id="topbar" style="background: rgba(255, 0, 0, 0); backdrop-filter: blur(0px); box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 0px;">
+        <div class="logo">
+            <img src="images/logo.png" class="logo">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a id="menulink" href="#">Home</a></li>
+                <li><a id="menulink" href="#aboutpage">About</a></li>
+                <li><a id="menulink" href="#">Service</a></li>
+                <li><a id="menulink" href="#">Blog</a></li>
+                <li onclick="toggleMenu()"><img id="profile" style="height: 40px;border-radius: 50%;" src="images/profile.jpg"></li>
+            </ul>
+        </nav>
+
+    </div>
+    <header>
+        <h2 id="tittle">Crop Health Intelligence</h2>
+    </header>
+    <article>
+        <div class="box-1 box">
+            <div class="container">
+                <div class="tittlebox">
+                    <h2 class="box-1-tittle1">Protect your Crops,</h2>
+                    <h2 class="box-1-tittle2">Predicts the future</h2>
+                </div>
+                <div class="contentbox">
+                    <p>
+                        Crop disease prediction involves forecasting potential disease outbreaks in crops using data
+                        like weather patterns, soil conditions, and historical disease records. It helps farmers take
+                        preventive measures to protect crops and ensure&nbsp;healthy&nbsp;yields.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="box-2 box">
+            <div class="para-container">
+                <div class="tittlebox">
+                    <h1 class="box-2-tittle1">AI-Driven Insights</h1>
+                </div>
+                <div class="contentbox">
+                    <p>
+                        Crop disease prediction refers to the process of forecasting the likelihood of a disease
+                        outbreak in crops before it occurs. This prediction is typically based on the analysis of
+                        various data inputs, including environmental factors (such as temperature, humidity, and
+                        rainfall), soil conditions, crop health indicators, historical disease data, and sometimes even
+                        remote sensing data from satellites or drones.
+                        The goal of crop disease prediction is to enable farmers and agricultural professionals to take
+                        proactive measures, such as applying preventive treatments, adjusting planting schedules, or
+                        modifying irrigation practices, to minimize the risk of crop loss and ensure optimal yields. By
+                        predicting diseases early, farmers can reduce the use of pesticides, manage resources more
+                        efficiently, and promote sustainable farming practices.
+                    </p>
+                </div>
+            </div>
+            <div class="picture-container">
+                <div class="picture-box">
+                    <img id="garden-img" src="images/vegpic.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="box-3 box">
+            <div class="container left-container">
+                <div class="innercontainer">
+                    <div class="tittlebox">
+                        <h2 class="box-1-tittle1">Disease identification</h2>
+                    </div>
+                    <div class="contentbox">
+                        <p>Empower your farming with early detection and actionable insights for healthier crops.
+                        </p><br><br>
+                    </div>
+                </div>
+                <button><a style="text-decoration: none;color:white;" href="cropselection.html">SCAN</a></button>
+            </div>
+            <div class="container right-container">
+                <div class="innercontainer">
+                    <div class="tittlebox">
+                        <h2 class="box-1-tittle1">Crop Health Assesment</h2>
+                    </div>
+                    <div class="contentbox">
+                        <p>
+                            Our website provides comprehensive crop health assessment services using AI-powered analysis and real-time data monitoring, helping farmers detect early signs of stress or disease
+                        </p><br><br>
+                    </div>
+                </div>
+                <button><a style="text-decoration: none;color:white;" href="cropselection.html">START</a></button>
+            </div>
+        </div>
+    </article>
+    <footer>
+
+    </footer>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
